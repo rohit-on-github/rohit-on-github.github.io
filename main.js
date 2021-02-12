@@ -61,12 +61,14 @@ __webpack_require__.r(__webpack_exports__);
 let AppComponent = class AppComponent {
     constructor() {
         this.appPages = [
-            { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-            { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-            { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-            { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-            { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-            { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+            { title: 'Profile Summary', url: '/summary' },
+            { title: 'Professional Expertise', url: '/expertise' },
+            { title: 'Experience', url: '/experience' },
+            { title: 'Skills', url: '/skills' },
+            { title: 'Projects', url: '/projects' },
+            { title: 'Achievement', url: '/achievement' },
+            // { title: 'Certificates', url: '/certificates'},
+            { title: 'Education', url: '/education' },
         ];
         this.labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     }
@@ -93,7 +95,7 @@ AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n        <ion-list id=\"inbox-list\">\n          <ion-list-header>Inbox</ion-list-header>\n          <ion-note>hi@ionicframework.com</ion-note>\n\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages; let i = index\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"[p.url]\" lines=\"none\" detail=\"false\" routerLinkActive=\"selected\">\n              <ion-icon slot=\"start\" [ios]=\"p.icon + '-outline'\" [md]=\"p.icon + '-sharp'\"></ion-icon>\n              <ion-label>{{ p.title }}</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n\n        <ion-list id=\"labels-list\">\n          <ion-list-header>Labels</ion-list-header>\n\n          <ion-item *ngFor=\"let label of labels\" lines=\"none\">\n            <ion-icon slot=\"start\" ios=\"bookmark-outline\" md=\"bookmark-sharp\"></ion-icon>\n            <ion-label>{{ label }}</ion-label>\n          </ion-item>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n        <ion-list id=\"inbox-list\">\n          <ion-list-header>Rohit Kumar Bhandari</ion-list-header>\n\n          <ion-note>Open to Work -</ion-note>\n          <ion-note>Data Scientist Role</ion-note>\n\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages; let i = index\">\n            <ion-item routerDirection=\"root\" [routerLink]=\"[p.url]\" lines=\"none\" detail=\"false\" routerLinkActive=\"selected\">\n              <ion-icon slot=\"start\" [ios]=\"p.icon + '-outline'\" [md]=\"p.icon + '-sharp'\"></ion-icon>\n              <ion-label>{{ p.title }}</ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n\n        <!-- <ion-list id=\"labels-list\">\n          <ion-list-header>Labels</ion-list-header>\n\n          <ion-item *ngFor=\"let label of labels\" lines=\"none\">\n            <ion-icon slot=\"start\" ios=\"bookmark-outline\" md=\"bookmark-sharp\"></ion-icon>\n            <ion-label>{{ label }}</ion-label>\n          </ion-item>\n        </ion-list> -->\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n");
 
 /***/ }),
 
@@ -394,12 +396,44 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        redirectTo: 'folder/Inbox',
+        redirectTo: '/summary',
         pathMatch: 'full'
     },
     {
-        path: 'folder/:id',
-        loadChildren: () => __webpack_require__.e(/*! import() | folder-folder-module */ "folder-folder-module").then(__webpack_require__.bind(null, /*! ./folder/folder.module */ "yIOV")).then(m => m.FolderPageModule)
+        path: 'summary',
+        loadChildren: () => __webpack_require__.e(/*! import() | summary-summary-module */ "summary-summary-module").then(__webpack_require__.bind(null, /*! ./summary/summary.module */ "A6O4")).then(m => m.SummaryPageModule)
+    },
+    {
+        path: 'expertise',
+        loadChildren: () => __webpack_require__.e(/*! import() | expertise-expertise-module */ "expertise-expertise-module").then(__webpack_require__.bind(null, /*! ./expertise/expertise.module */ "EzXz")).then(m => m.ExpertisePageModule)
+    },
+    {
+        path: 'experience',
+        loadChildren: () => __webpack_require__.e(/*! import() | experience-experience-module */ "experience-experience-module").then(__webpack_require__.bind(null, /*! ./experience/experience.module */ "n62C")).then(m => m.ExperiencePageModule)
+    },
+    {
+        path: 'skills',
+        loadChildren: () => __webpack_require__.e(/*! import() | skills-skills-module */ "skills-skills-module").then(__webpack_require__.bind(null, /*! ./skills/skills.module */ "nGXA")).then(m => m.SkillsPageModule)
+    },
+    {
+        path: 'achievement',
+        loadChildren: () => __webpack_require__.e(/*! import() | achievement-achievement-module */ "achievement-achievement-module").then(__webpack_require__.bind(null, /*! ./achievement/achievement.module */ "QcTa")).then(m => m.AchievementPageModule)
+    },
+    {
+        path: 'certificates',
+        loadChildren: () => __webpack_require__.e(/*! import() | certificates-certificates-module */ "certificates-certificates-module").then(__webpack_require__.bind(null, /*! ./certificates/certificates.module */ "xhln")).then(m => m.CertificatesPageModule)
+    },
+    {
+        path: 'education',
+        loadChildren: () => __webpack_require__.e(/*! import() | education-education-module */ "education-education-module").then(__webpack_require__.bind(null, /*! ./education/education.module */ "hDSD")).then(m => m.EducationPageModule)
+    },
+    {
+        path: 'contact',
+        loadChildren: () => __webpack_require__.e(/*! import() | contact-contact-module */ "contact-contact-module").then(__webpack_require__.bind(null, /*! ./contact/contact.module */ "BjQp")).then(m => m.ContactPageModule)
+    },
+    {
+        path: 'projects',
+        loadChildren: () => __webpack_require__.e(/*! import() | projects-projects-module */ "projects-projects-module").then(__webpack_require__.bind(null, /*! ./projects/projects.module */ "Wm2z")).then(m => m.ProjectsPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
