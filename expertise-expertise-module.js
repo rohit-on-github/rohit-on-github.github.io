@@ -87,7 +87,7 @@ ExpertisePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>Areas of Expertise</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n\n  <h4>\n    Areas of professional expertise:\n  </h4>\n\n  <ion-list>\n    <ion-list-item>\n      • Business Acumen\n    </ion-list-item>\n    <ion-list-item>\n      • Effective Communication\n    </ion-list-item>\n    <ion-list-item>\n      • Time Series Models\n    </ion-list-item>\n    <ion-list-item>\n      • Python\n    </ion-list-item>\n    <ion-list-item>\n      • Data Analysis\n    </ion-list-item>\n    <ion-list-item>\n      • Django\n    </ion-list-item>\n  </ion-list>\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Areas of Expertise</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n\n  <h4>\n    Areas of professional expertise:\n  </h4>\n\n  <ion-list>\n    <ion-list-item>\n      • Business Acumen\n    </ion-list-item>\n    <ion-list-item>\n      • Effective Communication\n    </ion-list-item>\n    <ion-list-item>\n      • Time Series Models\n    </ion-list-item>\n    <ion-list-item>\n      • Python\n    </ion-list-item>\n    <ion-list-item>\n      • Data Analysis\n    </ion-list-item>\n    <ion-list-item>\n      • Django\n    </ion-list-item>\n  </ion-list>\n\n</ion-content>");
 
 /***/ }),
 

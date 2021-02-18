@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>Education</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n  Training Program on Data Science  . EXCELR Solutions (Division of EXCELR Solutions (USA))\n  Bachelor of Engineering (Computer Science) . SGSITS (Indore, M.P.) - Estd. 1952\n  High School (Science) conc. in Computer Science. Delhi Public School, Vijaipur (Guna, M.P)\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Education</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n\n  <h3>\n    Training Program on Data Science . EXCELR Solutions (Division of EXCELR Solutions (USA))\n    Bachelor of Engineering (Computer Science) . SGSITS (Indore, M.P.) - Estd. 1952\n    High School (Science) conc. in Computer Science. Delhi Public School, Vijaipur (Guna, M.P)\n  </h3>\n\n</ion-content>");
 
 /***/ }),
 

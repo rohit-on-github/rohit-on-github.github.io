@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>Achievement</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n\n  Gold Badge in Python: Earned Gold Badge for Python on HackerRank\n  HOPE Everywhere– Volunteer: Participation in fund collection events (Selling muffins and Collecting Old books and\n  notebooks), teaching underprivileged children, with great teamwork and responsibility. (2016 - 2017)\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Achievements</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n\n  <h3>\n\n    Gold Badge in Python: Earned Gold Badge for Python on HackerRank\n    HOPE Everywhere– Volunteer: Participation in fund collection events (Selling muffins and Collecting Old books and\n    notebooks), teaching underprivileged children, with great teamwork and responsibility. (2016 - 2017)\n  \n  </h3>\n\n</ion-content>");
 
 /***/ }),
 
