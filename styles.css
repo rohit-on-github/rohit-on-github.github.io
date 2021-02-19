@@ -1232,5 +1232,14 @@ sub {
 .ion-align-items-baseline {
   align-items: baseline !important;
 }
+ion-content, ion-header, ion-footer, ion-item {
+  font-family: "Dosis", sans-serif;
+}
+ion-content {
+  --background: url(https://image.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg) 0 0/100% 100% no-repeat;
+}
+.item-background-color {
+  --background: url(https://image.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg) 0 0/100% 100% no-repeat;
+}
 
 /*# sourceMappingURL=styles.css.map*/

@@ -46,7 +46,7 @@ CertificatesPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__dec
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Certificates</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-contentclass=\"ion-padding\">\n\n  <h3>\n  </h3>\n\n  </ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar class=\"item-background-color\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Certificates</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-contentclass=\"ion-padding\">\n\n  <h3>\n  </h3>\n\n  </ion-content>");
 
 /***/ }),
 
