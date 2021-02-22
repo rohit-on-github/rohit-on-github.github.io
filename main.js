@@ -435,7 +435,7 @@ const routes = [
     {
         path: 'projects',
         loadChildren: () => __webpack_require__.e(/*! import() | projects-projects-module */ "projects-projects-module").then(__webpack_require__.bind(null, /*! ./projects/projects.module */ "Wm2z")).then(m => m.ProjectsPageModule)
-    }
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
