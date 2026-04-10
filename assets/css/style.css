@@ -532,6 +532,7 @@ section {
   display: block;
   background: none;
   margin-bottom: 28px;
+  overflow: visible;
 }
 
 .skills .progress .skill {
@@ -540,6 +541,7 @@ section {
   margin: 0;
   font-weight: 700;
   color: var(--text);
+  line-height: 1.45;
 }
 
 .skills .progress .skill .val {
@@ -552,6 +554,7 @@ section {
   background: rgba(31, 47, 95, 0.08);
   border-radius: 999px;
   overflow: hidden;
+  margin-top: 2px;
 }
 
 .skills .progress-bar {
@@ -560,6 +563,10 @@ section {
   transition: width 0.9s ease;
   background: linear-gradient(90deg, var(--navy) 0%, var(--accent) 100%);
   border-radius: 999px;
+}
+
+.skills-panel .skills-content {
+  margin-top: 28px;
 }
 
 .case-study-grid {
