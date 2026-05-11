@@ -5,158 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Daily Brief — 2026-05-11</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/css/style.css" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8fafc;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-        .top-bar {
+        body { background: #f8fafc; font-family: 'Manrope', sans-serif; }
+        .news-header {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+            padding: 20px 0;
+            position: sticky; top: 0; z-index: 1000;
         }
-        .top-bar .brand { font-size: 20px; font-weight: 700; }
-        .top-bar .brand span { opacity: 0.8; font-weight: 400; }
-        .top-bar nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            opacity: 0.85;
-            font-size: 14px;
-        }
-        .top-bar nav a:hover { opacity: 1; }
-        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .news-header .container { display: flex; align-items: center; justify-content: space-between; }
+        .news-header .brand { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+        .news-header .brand span { opacity: 0.7; font-weight: 500; }
+        .news-header nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 24px; font-size: 14px; font-weight: 600; }
+        .news-header nav a:hover { color: #fff; }
+        .news-body { padding: 32px 0; }
         .date-badge {
             display: inline-block;
             background: #e0e7ff;
             color: #2563eb;
-            padding: 4px 14px;
+            padding: 6px 16px;
             border-radius: 20px;
             font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
-        .ad-placeholder {
-            background: #f1f5f9;
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
-            margin: 24px 0;
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
         }
-        .news-content h1 { font-size: 28px; margin-bottom: 8px; }
-        .news-content h2 { font-size: 22px; margin: 28px 0 12px; color: #2563eb; }
-        .news-content h3 { font-size: 18px; margin: 20px 0 8px; }
-        .news-content p { margin: 12px 0; }
-        .news-content ul { margin: 8px 0 8px 20px; }
-        .news-content li { margin: 4px 0; }
-        .news-content hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
-        .wiki-link {
-            color: #2563eb;
-            text-decoration: none;
+        .news-card h2 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+        .news-card .section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; margin-bottom: 8px; }
+        .news-card h3 { font-size: 18px; font-weight: 600; margin: 16px 0 8px; color: #333; }
+        .news-card p { font-size: 15px; line-height: 1.7; color: #475569; }
+        .news-card ul { padding-left: 20px; }
+        .news-card li { font-size: 15px; line-height: 1.7; color: #475569; margin: 4px 0; }
+        .news-card hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
+        .company-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #f1f5f9; padding: 2px 12px 2px 6px;
+            border-radius: 20px; margin: 0 2px;
+        }
+        .company-badge .clogo {
+            width: 18px; height: 18px; border-radius: 4px; object-fit: contain;
+        }
+        .company-badge .wiki-link {
+            color: #2563eb; text-decoration: none; font-weight: 600; font-size: 14px;
             border-bottom: 1px dashed #93c5fd;
         }
-        .wiki-link:hover { border-bottom-style: solid; }
-        .footer {
-            text-align: center;
-            padding: 32px 20px;
-            color: #94a3b8;
-            font-size: 13px;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 40px;
+        .company-badge .wiki-link:hover { border-bottom-style: solid; }
+        .key-people {
+            display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0;
         }
-        .footer a { color: #2563eb; text-decoration: none; }
-        .archive-list { list-style: none; }
+        .key-person {
+            display: flex; align-items: center; gap: 8px;
+            background: #f8fafc; padding: 6px 14px 6px 6px;
+            border-radius: 24px; border: 1px solid #e2e8f0;
+        }
+        .key-person img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+        .key-person .name { font-size: 13px; font-weight: 600; color: #333; }
+        .key-person .role { font-size: 11px; color: #64748b; }
+        .ad-unit {
+            background: #f1f5f9; border: 2px dashed #cbd5e1;
+            border-radius: 8px; padding: 32px 16px; text-align: center;
+            color: #94a3b8; font-size: 14px; margin: 24px 0;
+        }
+        .news-footer {
+            text-align: center; padding: 32px 0; color: #94a3b8;
+            font-size: 13px; border-top: 1px solid #e2e8f0; margin-top: 40px;
+        }
+        .news-footer a { color: #2563eb; text-decoration: none; font-weight: 600; }
+        .archive-list { list-style: none; padding: 0; }
         .archive-list li { padding: 12px 0; border-bottom: 1px solid #e2e8f0; }
-        .archive-list a { color: #2563eb; text-decoration: none; font-size: 16px; }
+        .archive-list a { color: #2563eb; text-decoration: none; font-size: 16px; font-weight: 600; }
         .archive-list a:hover { text-decoration: underline; }
+        .quick-hits h3 { font-size: 16px; font-weight: 700; color: #2563eb; margin: 20px 0 8px; }
+        .quick-hits ul { padding-left: 20px; }
+        .quick-hits li { font-size: 14px; margin: 4px 0; color: #475569; }
+        @media (max-width: 768px) {
+            .news-header nav a { margin-left: 12px; font-size: 12px; }
+            .news-card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="brand">AI Daily Brief <span>by Rohit Bhandari</span></div>
-        <nav>
-            <a href="https://rohitbhandariwork.github.io/news">Archive</a>
-            <a href="https://rohitbhandariwork.github.io">Portfolio</a>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="date-badge">Monday, May 11, 2026</div>
-        <div class="ad-placeholder">📢 Google AdSense — Ad Unit</div>
-        <div class="news-content"><!DOCTYPE html>
+    <header class="news-header">
+        <div class="container">
+            <div class="brand">AI Daily Brief <span>by Rohit Bhandari</span></div>
+            <nav>
+                <a href="https://rohitbhandariwork.github.io/news">Archive</a>
+                <a href="https://rohitbhandariwork.github.io">Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="news-body">
+        <div class="container">
+            <div class="date-badge">Monday, May 11, 2026</div>
+            <div class="ad-unit">Ad Unit — Google AdSense</div>
+            <div class="news-card"><div class="key-people"><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Demis_Hassabis_2024.jpg&w=48" alt="Demis Hassabis" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Demis Hassabis</div><div class="role">CEO, DeepMind</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/&w=48" alt="Emad Mostaque" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Emad Mostaque</div><div class="role">CEO, Stability AI</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Jensen_Huang_2023.jpg&w=48" alt="Jensen Huang" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Jensen Huang</div><div class="role">CEO, Nvidia</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/&w=48" alt="Marc Benioff" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Marc Benioff</div><div class="role">CEO, Salesforce</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Mark_Zuckerberg_F8_2018.jpg&w=48" alt="Mark Zuckerberg" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Mark Zuckerberg</div><div class="role">CEO, Meta</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/&w=48" alt="Neal Mohan" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Neal Mohan</div><div class="role">CEO, YouTube</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Sam_Altman_WEF_2023.png&w=48" alt="Sam Altman" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Sam Altman</div><div class="role">CEO, OpenAI</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Satya_Nadella.jpg&w=48" alt="Satya Nadella" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Satya Nadella</div><div class="role">CEO, Microsoft</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/&w=48" alt="Shantanu Narayen" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Shantanu Narayen</div><div class="role">CEO, Adobe</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Sundar_Pichai_WEF_2023.png&w=48" alt="Sundar Pichai" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Sundar Pichai</div><div class="role">CEO, Google</div></div></div><div class="key-person"><img src="https://images.weserv.nl/?url=https://commons.wikimedia.org/wiki/Special:FilePath/Tim_Cook_2024.jpg&w=48" alt="Tim Cook" loading="lazy" onerror="this.style.display='none'"><div><div class="name">Tim Cook</div><div class="role">CEO, Apple</div></div></div></div><!DOCTYPE html>
 <html><head><meta charset='utf-8'></head>
 <body style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1a1a1a;'>
 <div style='text-align: center; padding: 20px 0; border-bottom: 2px solid #eee;'>
 <h1 style='color: #2563eb; margin: 0;'>🤖 AI Daily Brief</h1>
 <p style='color: #666;'>2026-05-11</p>
 </div>
-<h2 style='color:#2563eb;'>🚀 <a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener" class="wiki-link">OPENAI</a> – GPT‑5.5 Unleashed: Faster Code, Smarter Reasoning</h2>
-<p><strong>Key Highlights:</strong></p>
-<ul>
-<li>30% boost in complex reasoning benchmarks vs. GPT‑4.</li>
-<li>New “code‑assistant” mode writes and debugs software up to 40% faster.</li>
-<li>Available via API and integrated into <a href="https://en.wikipedia.org/wiki/GitHub" target="_blank" rel="noopener" class="wiki-link">GitHub</a> Copilot starting next week.</li>
-</ul>
-<p><strong>Why it matters:</strong> Developers gain a more capable, productivity‑driving partner, tightening <a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener" class="wiki-link">OpenAI</a>’s grip on the lucrative software‑assistant market and raising the bar for all downstream AI coding tools.</p>
-<hr>
-<h2 style='color:#2563eb;'>🪟 <a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener" class="wiki-link">MICROSOFT</a> – Copilot X Lands in Windows 12 – AI at the OS Level</h2>
-<p><strong>Key Highlights:</strong></p>
-<ul>
-<li>Copilot X baked into Windows 12 for voice, text, and on‑device inference.</li>
-<li>Real‑time workflow automation: auto‑summarize emails, generate presentations, and predict next actions.</li>
-<li>Low‑latency on‑device model runs on <a href="https://en.wikipedia.org/wiki/Intel" target="_blank" rel="noopener" class="wiki-link">Intel</a> Xe LP GPUs, preserving privacy.</li>
-</ul>
-<p><strong>Why it matters:</strong> Embedding a full‑stack assistant directly into the OS puts AI in the hands of hundreds of millions of consumers, reshaping daily computer interaction and setting a new baseline for competitors.</p>
-<hr>
-<h2 style='color:#2563eb;'>🇪🇺 EU PARLIAMENT – AI‑Transparency Act Passes – Mandatory Model Cards for All</h2>
-<p><strong>Key Highlights:</strong></p>
-<ul>
-<li>Requires public model‑card disclosures: data sources, training pipeline, performance metrics.</li>
-<li>Non‑compliance fines up to 6% of global revenue or €30 million, whichever is higher.</li>
-<li>Applies to any AI system deployed in the EU market, from chatbots to vision APIs.</li>
-</ul>
-<p><strong>Why it matters:</strong> The world’s first sweeping AI‑accountability law forces the entire industry to be transparent about how models are built, creating a de‑facto global standard and a new compliance cost curve.</p>
-<hr>
-<h2 style='color:#2563eb;'>🔧 <a href="https://en.wikipedia.org/wiki/Nvidia" target="_blank" rel="noopener" class="wiki-link">NVIDIA</a> – DGX‑H100 Supercluster: Train Trillion‑Parameter Models in &lt;24 hrs</h2>
-<p><strong>Key Highlights:</strong></p>
-<ul>
-<li>8 × DGX‑H100 nodes with NVLink‑4, delivering 2 exaflops of mixed‑precision AI compute.</li>
-<li>Early adopters <a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener" class="wiki-link">OpenAI</a> and Baidu report training 1‑trillion‑parameter models in 22 hours.</li>
-<li>Integrated with <a href="https://en.wikipedia.org/wiki/Nvidia" target="_blank" rel="noopener" class="wiki-link">NVIDIA</a> AI Enterprise for turnkey deployment and monitoring.</li>
-</ul>
-<p><strong>Why it matters:</strong> By slashing training time for massive models, <a href="https://en.wikipedia.org/wiki/Nvidia" target="_blank" rel="noopener" class="wiki-link">NVIDIA</a> fuels the next wave of foundation‑model breakthroughs, giving hardware advantage to firms that can afford the supercluster.</p>
-<hr>
+<h2 style='color:#2563eb;'>🤖 <span class="company-badge"><img src="https://logo.clearbit.com/openai.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener" class="wiki-link">OpenAI</a></span> – <span class="company-badge"><img src="https://logo.clearbit.com/openai.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/OpenAI" target="_blank" rel="noopener" class="wiki-link">OpenAI</a></span> Rolls Out “ChatGPT Enterprise” with Unlimited GPT‑4 Turbo Access</h2>
+<p>New tier priced at $20 per user/month, offering unlimited GPT‑4 Turbo calls and higher data‑privacy guarantees. Integrated admin console, single‑sign‑on (SSO) and domain‑wide usage analytics for corporate teams. Early adopters include <span class="company-badge"><img src="https://logo.clearbit.com/salesforce.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Salesforce" target="_blank" rel="noopener" class="wiki-link">Salesforce</a></span>, Shopify, and a consortium of Fortune 500 firms.</p>
+<p><strong>Why it matters:</strong> Enterprise‑grade access removes the usage caps that have limited large‑scale deployments, opening the door for AI‑driven workflows across finance, HR, and product development at a price point that scales with the workforce.</p>
+<h2 style='color:#2563eb;'>🟢 <span class="company-badge"><img src="https://logo.clearbit.com/google.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Google" target="_blank" rel="noopener" class="wiki-link">Google</a></span> – <span class="company-badge"><img src="https://logo.clearbit.com/google.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Google" target="_blank" rel="noopener" class="wiki-link">Google</a></span> <span class="company-badge"><img src="https://logo.clearbit.com/deepmind.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/DeepMind" target="_blank" rel="noopener" class="wiki-link">DeepMind</a></span> Announces Gemini 1.5: Multimodal Model with 1 Trillion Parameters</h2>
+<p>Gemini 1.5 combines text, image, audio, and video understanding in a single 1‑trillion‑parameter model. Benchmarks show 45 % improvement on VQA and 30 % on multilingual translation over Gemini 1.0. Available via <span class="company-badge"><img src="https://logo.clearbit.com/google.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Google" target="_blank" rel="noopener" class="wiki-link">Google</a></span> Cloud Vertex AI with pay‑as‑you‑go pricing; early access program starts next week.</p>
+<p><strong>Why it matters:</strong> A truly multimodal LLM narrows the gap between specialist AI tools and a universal assistant, enabling developers to build apps that can “see, hear, and speak” without stitching together separate models.</p>
+<h2 style='color:#2563eb;'>🟣 <span class="company-badge"><img src="https://logo.clearbit.com/meta.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener" class="wiki-link">Meta</a></span> – <span class="company-badge"><img src="https://logo.clearbit.com/meta.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener" class="wiki-link">Meta</a></span> Launches “LLaMA‑3” Open‑Source Model, Now 70 B Parameters with Open Weights</h2>
+<p>LLaMA‑3 70 B released under the <span class="company-badge"><img src="https://logo.clearbit.com/meta.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener" class="wiki-link">Meta</a></span> Research License, allowing commercial use with attribution. Training data refreshed to include 2024 web content, improving factuality and reducing hallucinations. Accompanied by a new “LoRA‑Ready” toolkit for easy fine‑tuning on niche domains.</p>
+<p><strong>Why it matters:</strong> By providing a powerful, openly licensed model, <span class="company-badge"><img src="https://logo.clearbit.com/meta.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Meta" target="_blank" rel="noopener" class="wiki-link">Meta</a></span> fuels the open‑source AI ecosystem, giving startups and academia a high‑performance alternative to closed APIs and accelerating innovation.</p>
+<h2 style='color:#2563eb;'>🟦 <span class="company-badge"><img src="https://logo.clearbit.com/microsoft.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener" class="wiki-link">Microsoft</a></span> – <span class="company-badge"><img src="https://logo.clearbit.com/microsoft.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener" class="wiki-link">Microsoft</a></span> Integrates Copilot into Teams Calls, Offering Real‑Time Summaries and Action Items</h2>
+<p>AI Copilot listens to live meetings, generating on‑the‑fly minutes, task lists, and follow‑up reminders. Supports 15 languages and can be toggled on/off per participant for privacy compliance. Rolled out to <span class="company-badge"><img src="https://logo.clearbit.com/microsoft.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener" class="wiki-link">Microsoft</a></span> 365 E5 customers today; broader availability slated for Q4 2024.</p>
+<p><strong>Why it matters:</strong> Embedding generative AI directly into collaboration tools reduces meeting fatigue and ensures that decisions are captured accurately, boosting productivity for remote and hybrid workforces.</p>
 <h2 style='color:#2563eb;'>━━━ QUICK HITS ━━━</h2>
-<h3>🛠️ Trending AI Tools</h3>
+<p><strong>🛠️ Trending AI Tools</strong></p>
 <ul>
-<li>Gemini‑2 (<a href="https://en.wikipedia.org/wiki/DeepMind" target="_blank" rel="noopener" class="wiki-link">DeepMind</a>) – Multimodal model with real‑time video safety‑hazard detection (92% accuracy).</li>
-<li>LLaMA‑3 (<a href="https://en.wikipedia.org/wiki/Meta_Platforms" target="_blank" rel="noopener" class="wiki-link">Meta</a>) – Open‑source LLM with built‑in privacy filters, 98% PII removal success.</li>
+<li><strong>Runway Gen‑2</strong> – AI video generator that turns text prompts into 30‑second clips with motion tracking.</li>
+<li><strong>Mistral‑Lite</strong> – Lightweight 7 B model optimized for edge devices, ideal for on‑device inference.</li>
 </ul>
-<h3>📰 Everything else</h3>
+<p><strong>📰 Everything else</strong></p>
 <ul>
-<li>China rolls out national AI Safety Guidelines, mandating risk assessments and real‑time monitoring.</li>
-<li>Stanford’s Mosaic benchmark debuts: 500‑task multimodal suite; GPT‑5.5 scores 78%, Gemini‑2 leads video tasks.</li>
-<li>Valence Therapeutics secures $250 M to speed AI‑driven rare‑disease drug discovery, already flagging three novel candidates.</li>
+<li><span class="company-badge"><img src="https://logo.clearbit.com/apple.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Apple" target="_blank" rel="noopener" class="wiki-link">Apple</a></span>’s AI Ethics Board expands to include external regulators, aiming for transparent policy reviews.</li>
+<li><span class="company-badge"><img src="https://logo.clearbit.com/nvidia.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Nvidia" target="_blank" rel="noopener" class="wiki-link">Nvidia</a></span> releases DGX Cloud 2.0, adding pre‑installed LLM stacks for rapid prototyping.</li>
+<li><span class="company-badge"><img src="https://logo.clearbit.com/stability.ai?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Stability_AI" target="_blank" rel="noopener" class="wiki-link">Stability AI</a></span> partners with <span class="company-badge"><img src="https://logo.clearbit.com/adobe.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/Adobe" target="_blank" rel="noopener" class="wiki-link">Adobe</a></span> to embed diffusion models into Photoshop’s “Generative Fill.”</li>
 </ul>
 <div style='text-align: center; padding: 20px; color: #999; font-size: 12px; border-top: 1px solid #eee; margin-top: 30px;'>
-<p>Powered by <a href="https://en.wikipedia.org/wiki/YouTube" target="_blank" rel="noopener" class="wiki-link">YouTube</a> Agency Bot</p>
+<p>Powered by <span class="company-badge"><img src="https://logo.clearbit.com/youtube.com?size=32" alt="" class="clogo" loading="lazy" onerror="this.style.display='none'"><a href="https://en.wikipedia.org/wiki/YouTube" target="_blank" rel="noopener" class="wiki-link">YouTube</a></span> Agency Bot</p>
 </div>
 </body></html></div>
-        <div class="ad-placeholder">📢 Google AdSense — Ad Unit</div>
+            <div class="ad-unit">Ad Unit — Google AdSense</div>
+        </div>
     </div>
-    <div class="footer">
-        <p>Powered by AI Agents + Rohit Bhandari</p>
-        <p><a href="https://rohitbhandariwork.github.io/news">View Archive</a> · <a href="https://rohitbhandariwork.github.io">Portfolio</a></p>
-    </div>
+
+    <footer class="news-footer">
+        <div class="container">
+            <p>Powered by AI Agents + Rohit Bhandari</p>
+            <p><a href="https://rohitbhandariwork.github.io/news">Archive</a> · <a href="https://rohitbhandariwork.github.io">Portfolio</a></p>
+        </div>
+    </footer>
 </body>
 </html>

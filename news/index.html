@@ -5,100 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Daily Brief — 2026-05-11</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://rohitbhandariwork.github.io/assets/css/style.css" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8fafc;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-        .top-bar {
+        body { background: #f8fafc; font-family: 'Manrope', sans-serif; }
+        .news-header {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+            padding: 20px 0;
+            position: sticky; top: 0; z-index: 1000;
         }
-        .top-bar .brand { font-size: 20px; font-weight: 700; }
-        .top-bar .brand span { opacity: 0.8; font-weight: 400; }
-        .top-bar nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            opacity: 0.85;
-            font-size: 14px;
-        }
-        .top-bar nav a:hover { opacity: 1; }
-        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .news-header .container { display: flex; align-items: center; justify-content: space-between; }
+        .news-header .brand { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+        .news-header .brand span { opacity: 0.7; font-weight: 500; }
+        .news-header nav a { color: rgba(255,255,255,0.8); text-decoration: none; margin-left: 24px; font-size: 14px; font-weight: 600; }
+        .news-header nav a:hover { color: #fff; }
+        .news-body { padding: 32px 0; }
         .date-badge {
             display: inline-block;
             background: #e0e7ff;
             color: #2563eb;
-            padding: 4px 14px;
+            padding: 6px 16px;
             border-radius: 20px;
             font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
-        .ad-placeholder {
-            background: #f1f5f9;
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
-            margin: 24px 0;
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
         }
-        .news-content h1 { font-size: 28px; margin-bottom: 8px; }
-        .news-content h2 { font-size: 22px; margin: 28px 0 12px; color: #2563eb; }
-        .news-content h3 { font-size: 18px; margin: 20px 0 8px; }
-        .news-content p { margin: 12px 0; }
-        .news-content ul { margin: 8px 0 8px 20px; }
-        .news-content li { margin: 4px 0; }
-        .news-content hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
-        .wiki-link {
-            color: #2563eb;
-            text-decoration: none;
+        .news-card h2 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+        .news-card .section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2563eb; margin-bottom: 8px; }
+        .news-card h3 { font-size: 18px; font-weight: 600; margin: 16px 0 8px; color: #333; }
+        .news-card p { font-size: 15px; line-height: 1.7; color: #475569; }
+        .news-card ul { padding-left: 20px; }
+        .news-card li { font-size: 15px; line-height: 1.7; color: #475569; margin: 4px 0; }
+        .news-card hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
+        .company-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #f1f5f9; padding: 2px 12px 2px 6px;
+            border-radius: 20px; margin: 0 2px;
+        }
+        .company-badge .clogo {
+            width: 18px; height: 18px; border-radius: 4px; object-fit: contain;
+        }
+        .company-badge .wiki-link {
+            color: #2563eb; text-decoration: none; font-weight: 600; font-size: 14px;
             border-bottom: 1px dashed #93c5fd;
         }
-        .wiki-link:hover { border-bottom-style: solid; }
-        .footer {
-            text-align: center;
-            padding: 32px 20px;
-            color: #94a3b8;
-            font-size: 13px;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 40px;
+        .company-badge .wiki-link:hover { border-bottom-style: solid; }
+        .key-people {
+            display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0;
         }
-        .footer a { color: #2563eb; text-decoration: none; }
-        .archive-list { list-style: none; }
+        .key-person {
+            display: flex; align-items: center; gap: 8px;
+            background: #f8fafc; padding: 6px 14px 6px 6px;
+            border-radius: 24px; border: 1px solid #e2e8f0;
+        }
+        .key-person img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+        .key-person .name { font-size: 13px; font-weight: 600; color: #333; }
+        .key-person .role { font-size: 11px; color: #64748b; }
+        .ad-unit {
+            background: #f1f5f9; border: 2px dashed #cbd5e1;
+            border-radius: 8px; padding: 32px 16px; text-align: center;
+            color: #94a3b8; font-size: 14px; margin: 24px 0;
+        }
+        .news-footer {
+            text-align: center; padding: 32px 0; color: #94a3b8;
+            font-size: 13px; border-top: 1px solid #e2e8f0; margin-top: 40px;
+        }
+        .news-footer a { color: #2563eb; text-decoration: none; font-weight: 600; }
+        .archive-list { list-style: none; padding: 0; }
         .archive-list li { padding: 12px 0; border-bottom: 1px solid #e2e8f0; }
-        .archive-list a { color: #2563eb; text-decoration: none; font-size: 16px; }
+        .archive-list a { color: #2563eb; text-decoration: none; font-size: 16px; font-weight: 600; }
         .archive-list a:hover { text-decoration: underline; }
+        .quick-hits h3 { font-size: 16px; font-weight: 700; color: #2563eb; margin: 20px 0 8px; }
+        .quick-hits ul { padding-left: 20px; }
+        .quick-hits li { font-size: 14px; margin: 4px 0; color: #475569; }
+        @media (max-width: 768px) {
+            .news-header nav a { margin-left: 12px; font-size: 12px; }
+            .news-card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="brand">AI Daily Brief <span>by Rohit Bhandari</span></div>
-        <nav>
-            <a href="https://rohitbhandariwork.github.io/news">Archive</a>
-            <a href="https://rohitbhandariwork.github.io">Portfolio</a>
-        </nav>
+    <header class="news-header">
+        <div class="container">
+            <div class="brand">AI Daily Brief <span>by Rohit Bhandari</span></div>
+            <nav>
+                <a href="https://rohitbhandariwork.github.io/news">Archive</a>
+                <a href="https://rohitbhandariwork.github.io">Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="news-body">
+        <div class="container">
+            <div class="date-badge">Monday, May 11, 2026</div>
+            <div class="ad-unit">Ad Unit — Google AdSense</div>
+            <div class="news-card"><h1>AI News Archive</h1><ul class='archive-list'><li><a href="https://rohitbhandariwork.github.io/news/2026/05/11">📰 May 11, 2026</a></li></ul></div>
+            <div class="ad-unit">Ad Unit — Google AdSense</div>
+        </div>
     </div>
-    <div class="container">
-        <div class="date-badge">Monday, May 11, 2026</div>
-        <div class="ad-placeholder">📢 Google AdSense — Ad Unit</div>
-        <div class="news-content"><h1>AI News Archive</h1><ul class='archive-list'><li><a href="https://rohitbhandariwork.github.io/news/2026/05/11">📰 May 11, 2026</a></li></ul></div>
-        <div class="ad-placeholder">📢 Google AdSense — Ad Unit</div>
-    </div>
-    <div class="footer">
-        <p>Powered by AI Agents + Rohit Bhandari</p>
-        <p><a href="https://rohitbhandariwork.github.io/news">View Archive</a> · <a href="https://rohitbhandariwork.github.io">Portfolio</a></p>
-    </div>
+
+    <footer class="news-footer">
+        <div class="container">
+            <p>Powered by AI Agents + Rohit Bhandari</p>
+            <p><a href="https://rohitbhandariwork.github.io/news">Archive</a> · <a href="https://rohitbhandariwork.github.io">Portfolio</a></p>
+        </div>
+    </footer>
 </body>
 </html>
